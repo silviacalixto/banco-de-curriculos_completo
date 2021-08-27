@@ -1,0 +1,114 @@
+{
+    "openapi": "3.0.0",
+
+    "info": {
+        "title": "API do banco de currículos",
+        "description": "Essa é a API do banco de currículos do desafio da Gama Academy",
+        "version": "0.0.1"
+    },
+
+    "servers": [
+        {
+            "url": "http://localhost:5000",
+            "description": "ambiente de desenvolvimeto"
+        }
+    ],
+
+    "paths": {
+        "/register": {
+            "post": {
+                "sumary": "Cadastro de candidato",
+                "description": "Rota de cadastro de usuário, recebe: nome, cargo, dataNascimento, estadoCivil, sexo, cep, endereco, numero, bairro, cidade, estado, celular, telefoneFixo, email, identidade, cpf, possuiVeiculo, habilitacao",
+                "tags": ["candidato"],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nome": {
+                                        "type": "string"
+                                    },
+                                    "cargo": {
+                                        "type": "string"
+                                    },
+                                    "dataNascimento": {
+                                        "type": "date"
+                                    },
+                                    "estadoCivil": {
+                                        "type": "string"
+                                    },
+                                    "sexo": {
+                                        "type": "string"
+                                    },
+                                    "cep": {
+                                        "type": "string"
+                                    },
+                                    "endereco": {
+                                        "type": "string"
+                                    },
+                                    "numero": {
+                                        "type": "number"
+                                    },
+                                    "bairro": {
+                                        "type": "string"
+                                    },
+                                    "cidade": {
+                                        "type": "string"
+                                    },
+                                    "estado": {
+                                        "type": "string"
+                                    },
+                                    "celular": {
+                                        "type": "string"
+                                    },
+                                    "telefoneFixo": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "identidade": {
+                                        "type": "string"
+                                    },
+                                    "cpf": {
+                                        "type": "string"
+                                    },
+                                    "possuiVeiculo": {
+                                        "type": "string"
+                                    },
+                                    "habilitacao": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "exemplo": {
+                                    "value": {
+                                        "nome": "Silvia Calixto",
+                                        "cargo": "Full stack developer",
+                                        "dataNascimento": "30-09-1994",
+                                        "estadoCivil": "Solteira",
+                                        "sexo": "Feminino",
+                                        "cep": "59080260",
+                                        "endereco": "Rua Pernambuco",
+                                        "numero": "18",
+                                        "bairro": "Neopolis",
+                                        "cidade": "Natal",
+                                        "estado": "RN",
+                                        "celular": "988889988",
+                                        "telefoneFixo": "30988778",
+                                        "email": "spatriciascl@gmail.com",
+                                        "identidade": "000909123",
+                                        "cpf": "099123890-76",
+                                        "possuiVeiculo": "sim",
+                                        "habilitacao": "Categoria B"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
