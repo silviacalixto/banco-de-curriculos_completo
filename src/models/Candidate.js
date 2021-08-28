@@ -4,7 +4,7 @@ const CandidateSchema = new mongoose.Schema({
     nome: { type: String, unique: false, required: true },
     cargo: { type: String, unique: false, required: true },
     dataNascimento: { type: Date, unique: false, required: false },
-    estadoCivil: { type: Number, unique: false, required: false },
+    estadoCivil: { type: String, unique: false, required: false },
     sexo: { type: String, unique: false, required: false },
     cep: { type: String, unique: false, required: true },
     endereco: { type: String, unique: false, required: true },
