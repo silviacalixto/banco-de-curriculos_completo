@@ -28,7 +28,7 @@ module.exports = {
         newCandidate.save((err, savedCandidate) => {
             if(err) {
                 console.log(err);
-                return res.status(500).send('Erro no servidor');
+                return res.status(500).send(err);
             }
 
             return res.status(200).send(savedCandidate);
